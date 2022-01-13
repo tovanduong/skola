@@ -1,0 +1,41 @@
+.comment {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    @media (min-width:768px) {
+        margin-top: 57px;
+    }
+}
+.comment__img {
+    width: 80px;
+    height: 80px;
+}
+.comment__group {
+    width: calc(100% - 80px);
+    padding-left: 30px;
+    p {
+        margin: 0px;
+    }
+    span {
+        float: right;
+    }
+}
+.comment__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #2F2D51;
+}
+.comment__course{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+    color: #77838F;
+    margin-bottom: 10px;
+}
+.comment__comment {
+    margin: 0px;
+}

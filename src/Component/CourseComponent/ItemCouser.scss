@@ -1,0 +1,38 @@
+
+
+.titlecard {
+    margin-bottom: 24px;
+    
+}
+.titlecard__group {
+    .titlecard__title {
+        a {
+            color: #2F2D51;
+        }
+        padding-left: 0px;
+
+
+    }
+    .titlecard__text {
+        text-transform: capitalize;
+        padding-left: 0px;
+    }
+    padding: 0 20px 14px 20px;
+    img {
+        width: auto;
+        margin-right: 10px;
+    }
+    .qty {
+        margin: 0px;
+        margin-right: 20px;
+    }
+    .time {
+        display: inline-block;
+        margin-right: 52px;
+    }
+    .price {
+        font-weight: 500;
+        font-size: 20px;
+        color: #2F2D51;
+    }
+}

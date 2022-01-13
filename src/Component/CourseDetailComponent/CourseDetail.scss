@@ -1,0 +1,502 @@
+.sec-CourseDetail {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    background-color: #FFFFFF;
+    @media (min-width:768px) {
+        padding-top: 200px;
+        padding-bottom: 90px;
+    }
+}
+
+.sec-CourseDetail__title {
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #2F2D51;
+    @media (min-width:768px) {
+        font-size: 35px;
+    }
+}
+
+.sec-CourseDetail__text {
+    font-weight: normal;
+    font-size: 14px;
+    color: #77838F;
+    @media (min-width:768px) {
+        font-size: 16px;
+    }
+}
+.sec-CourseDetail__Created {
+    display: flex;
+    
+    .over-round {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        border: 1px solid #E7E7EC;
+        // padding: 7px;
+        box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1);
+    }
+    img {
+       
+        border-radius: 4px;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .group{
+        display: flex;
+        
+        margin-left: 12px;
+        @media (min-width:768) {
+            margin-left: 32px;
+        }
+        h3 {
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            color: #2F2D51;
+            margin-bottom: 0px;
+        }
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 30px;
+            color: #77838F;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .name {
+        display: block;
+        margin: auto;
+        
+        margin-right: 15px;
+        max-width: 200px;
+        @media (min-width:768) {
+            margin-right: 55px;
+        }
+    }
+
+    .category {
+        margin: auto;
+        // margin-right: 58px;
+        margin-right: 15px;
+        @media (min-width:768) {
+            margin-right: 58px;
+        }
+    }
+    .Review {
+        margin: auto;
+    }
+}
+.react-tabs__tab {
+    position: relative;
+    border: 0px;
+    box-shadow: none !important;
+    padding: 0 20px 10px;
+    margin: 0 30px;
+    @media (min-width:768) {
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+    }
+    @media (min-width:1024px) {
+        margin: 0 20px;
+    }
+    &:focus {
+        outline: none;
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0px !important;
+        bottom: 0px !important;
+        right: 0px !important;
+        width: 0;
+        margin: 0 auto;
+        height: 3px !important;
+        background: #2F2D51 !important;
+        transition: all 0.5s ease;
+    }
+    overflow: hidden;
+}
+.react-tabs__tab--selected::after {
+    width: 100%;
+}
+.react-tabs__tab-list {
+    border: 0px;
+}
+.sec-CourseDetail__Tab {
+    padding-top: 30px;
+}
+
+.react-tabs__tab-panel {
+    .sec-CourseDetail__sub-title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        color: #2F2D51 !important;
+        padding: 30px 0 10px 0;
+    }
+    .content-css {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 30px;
+        color: #77838F;
+    }
+
+    .show-group {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        img {
+            width: auto;
+        }
+    }
+    .show-btn{
+        margin-bottom: 0px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        text-transform: capitalize;
+        color: #4A8F9F;
+        margin-right: 9px;
+    }
+    img {
+        width: auto;
+    }
+    @media (min-width:768) {
+        .content-css {
+            font-size: 16px;
+        }
+        .sec-CourseDetail__sub-title {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+            padding: 45px 0 10px 0;
+        }
+    }
+}
+.list-text__item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    p {
+        margin: 0px;
+        font-weight: normal;
+        font-size: 16px;
+       
+    }
+    img {
+        margin-right: 11px;
+        margin-top: 5px;
+        
+    }
+}
+
+
+.requirement-__item {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    span {
+        margin-top: 10px;
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #4A8F9F;
+    }
+
+    p {
+        margin-bottom: 0;
+        width: calc( 100% - 6px );
+        padding-left: 10px;
+        font-size: 16px;
+        color: #77838F;
+        margin-bottom: 20px;
+    }
+}
+
+.accor__item {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #77838F;
+    transition: all .5s ease;
+    &:hover {
+        color: red;
+    }
+    img {
+        float: right;
+        width: auto;
+    }
+}
+.react-tabs__tab-panel .accordion .accordion__button {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #2F2D51;
+    display: inline-block;
+    span {
+        display: block;
+        position: absolute;
+        top: 35px;
+        left: 18px;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        transition: all 0.5s ease;
+        margin: 0px;
+        margin-top: -3px;
+    }
+    &::before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 0px;
+        margin-bottom: 4px;
+        transition: all 0.5s ease;
+        transform: rotate(90deg);
+    }
+    &[aria-expanded='true']::before{
+        transform: rotate(-540deg);
+    }
+    &[aria-expanded='true'] span {
+        transform: rotate(540deg);
+    }
+}
+
+.accordion__item {
+    margin: 30px 0;
+}
+.accordion {
+    border: 0px;
+}
+.instructor__inf {
+    display: flex;
+    img {
+        border-radius: 50%;
+        margin: 10px;
+        width: 140px;
+        height: 140px;
+        object-fit: contain;
+    }
+    align-items: center;
+}
+.instructor__group {
+    margin-left: 20px;
+}
+.instructor__group--name {
+    margin: 0px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2F2D51;
+}
+.instructor__group--job {
+    margin: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #77838F;
+}
+.instructor__note {
+    // margin-right: 40px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    img {
+        width: auto;
+        margin-right: 5px;
+    }
+    // @media (min-width:768px) {
+    //     font-size: 16px;
+    // }
+}
+.instructor__introdue {
+    margin-top: 32px;
+    p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        color: #77838F;
+        margin: 0px;
+        + p {
+            margin-top: 45px;
+        }   
+    }
+}
+
+.feedback__group {
+    text-align: center;
+    
+    background: #FFFFFF;
+    /* Stroke Color */
+
+    border: 1px solid #E7E7EC;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1);
+    border-radius: 4px;
+    &:last-child {
+        margin-bottom: 20px;
+    }
+}
+.feedback__number {
+    font-weight: 500;
+    font-size: 40px;
+    color: #2F2D51;
+    @media (min-width:768px) {
+        font-size: 40px;
+    }
+}
+
+.feedback__course-rating {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #2F2D51;
+}
+.sec-CourseDetail__group {
+    position: relative;
+    width: 100%;
+}
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.CourseDetail__inf {
+    text-align: center;
+
+}
+.sec-CourseDetail__inf {
+    background: #FFFFFF;
+    border: 1px solid #E7E7EC;
+    box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 30px;
+    @media (min-width:768px) {
+        margin-top: 0px;
+    }
+}
+.sec-CourseDetail__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    p {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 30px;
+        text-align: right;
+        text-transform: capitalize;
+        margin-bottom: 0px;
+        color: #2F2D51;
+        del {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 23px;
+            text-decoration-line: line-through;
+            text-transform: capitalize;
+            color: #77838F;
+        }
+    }
+    @media (min-width:768px) and (max-width: 1024px) {
+        margin-top: 10px;
+
+        p {
+            font-size: 14px;
+            // margin-left: 5px;
+            del {
+                margin-left: 9px;
+                font-size: 14px;
+            }
+        }
+        span {
+            margin-left: 5px;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+    }
+
+}
+.sec-CourseDetail__old--price {
+    margin-left: 10px;
+}
+.sec-CourseDetail__discount {
+    margin-left: 20px;
+    background: #B8B2FD;
+    border-radius: 4px;
+    padding: 5px 16px;
+    color: #FFF;
+}
+
+.sec-CourseDetail__content {
+    padding: 0 20px ;
+}
+.btn-BUY, .btn-ENROLL {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    margin-right: 0px;
+}
+.btn-BUY {
+    background-color: #090761;
+    color: white;
+    &:hover {
+        background-color: #020130;
+        color: #FFF;
+        border-color: #020130;
+    }
+}
+.btn-ENROLL {
+    background-color: #FFC78B;
+    color: #090761;
+    border: #FFC78B;
+}
+
+.sec-CourseDetail__list {
+    list-style: none;
+    padding: 0px;
+    li {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 0;
+        border-bottom: 1px solid #E7E7EC;
+        h4 {
+            font-weight: 500;
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #2F2D51;
+            margin: 0px;
+        }
+        span {
+            font-weight: normal;
+            font-size: 16px;
+            text-align: right;
+            text-transform: capitalize;
+            color: #77838F;
+        }
+    }
+    @media (min-width:768px) and (max-width:1023px) {
+        li {
+            h4 {
+                font-size: 14px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+}
