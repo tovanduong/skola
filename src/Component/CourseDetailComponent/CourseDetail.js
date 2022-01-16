@@ -2,9 +2,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useParams } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react'
 import ShowMoreText from "react-show-more-text";
-import { DataRating, DataComment } from '../../data/data';
+import { DataRating, DataComment, Datalearn } from '../../data/data';
 import { useEffect } from 'react'
 import Rating from '../ratingComponent/RatingComponent'
 import { DataCourse } from '../../data/data'
@@ -12,6 +13,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Comment from '../CommentComponent/CommentComponent';
 import ModalVideo from 'react-modal-video';
 import '../../../node_modules/react-modal-video/scss/modal-video.scss';
+import Learn from '../LearnComponent/learn';
 import {
     Accordion,
     AccordionItem,
@@ -40,7 +42,7 @@ function CourseDetail() {
                         <div className="col-md-8" >
                             <div className="sec-CourseDetail__group ">
                                 <h3 className='sec-CourseDetail__title' >{getItem[0].title}</h3>
-                                <p className="sec-CourseDetail__text">Master Figma app to get a job in UI Design, User Interface, User Experience design, Web Design & UX design.</p>
+                                <p className="sec-CourseDetail__text">{getItem[0].des}</p>
                             </div>
                             <div className="sec-CourseDetail__Created" >
                                 <div className='over-round'><img src='/img/Mask Group1.jpg' /> </div>
@@ -73,7 +75,7 @@ function CourseDetail() {
                                         <ShowMoreText
                                             /* Default options */
                                             lines={3}
-                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group 1.png' /></div>}
+                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group1.png' /></div>}
                                             less={<div className='show-group'><p className='show-btn'>Less More</p> <img src='/img/group2.png' /></div>} className="content-css"
                                             anchorClass="my-anchor-css-class"
                                             expanded={false}
@@ -87,72 +89,11 @@ function CourseDetail() {
                                         <h3 className='sec-CourseDetail__sub-title'>What you'll learn</h3>
                                         <div className='list-text'>
                                             <div className='row'>
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Become a UI/UX designer.</p>
+                                                {Datalearn.map((number, index) =>
+                                                    <div className="col-md-6" key={uuidv4()}>
+                                                        <Learn title={number} />
                                                     </div>
-                                                </div>
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>You will be able to start earning money Figma skills.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Build a UI project from beginning to end.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p> Work with colors & fonts.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>You will create your own UI Kit.</p>
-                                                    </div>
-                                                </div>
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Build & test a complete mobile app.</p>
-                                                    </div>
-                                                </div>
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Learn to design mobile apps & websites.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Design 3 different logos.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p> Create low-fidelity wireframe.</p>
-                                                    </div>
-                                                </div>
-
-                                                <div className='col-md-6'>
-                                                    <div className='list-text__item'>
-                                                        <img src='/img/Frame5.png' />
-                                                        <p>Downloadable exercise files.</p>
-                                                    </div>
-                                                </div>
+                                                )}
                                             </div>
                                         </div>
                                         <h3 className='sec-CourseDetail__sub-title'>Requirements</h3>
@@ -227,7 +168,7 @@ function CourseDetail() {
                                             <AccordionItem>
                                                 <AccordionItemHeading>
                                                     <AccordionItemButton>
-                                                    <span></span>Design Basics
+                                                        <span></span>Design Basics
                                                     </AccordionItemButton>
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
@@ -258,7 +199,7 @@ function CourseDetail() {
                                             <AccordionItem>
                                                 <AccordionItemHeading>
                                                     <AccordionItemButton>
-                                                    <span></span>UI Elements
+                                                        <span></span>UI Elements
                                                     </AccordionItemButton>
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
@@ -289,7 +230,7 @@ function CourseDetail() {
                                             <AccordionItem>
                                                 <AccordionItemHeading>
                                                     <AccordionItemButton>
-                                                    <span></span>Figma Academy
+                                                        <span></span>Figma Academy
                                                     </AccordionItemButton>
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
@@ -382,14 +323,14 @@ function CourseDetail() {
                                             <div className='col-md-8' >
                                                 {
                                                     DataRating.map((item, index) =>
-                                                        <Rating key={index} percent={item.percent} star={item.img} total={item.total} />
+                                                        <Rating key={uuidv4()} percent={item.percent} star={item.img} total={item.total} />
                                                     )
                                                 }
                                             </div>
                                             <div className='col-md-12' >
                                                 {
                                                     DataComment.map((cmt, index) =>
-                                                        <Comment key={index} name={cmt.name} img={cmt.img} course={cmt.course} icon={cmt.icon} comment={cmt.comment} />
+                                                        <Comment key={uuidv4()} comment={cmt} />
                                                     )
                                                 }
                                             </div>
@@ -401,9 +342,7 @@ function CourseDetail() {
                         <div className="col-md-4" >
                             <div className="sec-CourseDetail__inf">
                                 <div className='sec-CourseDetail__group'>
-                                    <img className='sec-CourseDetail__img'
-                                        src={getItem[0].img} alt={getItem[0].title}
-                                    />
+                                    <img src={getItem[0].img} alt={getItem[0].title}/>
                                     <ModalVideo channel='youtube'
                                         autoplay isOpen={isOpen}
                                         videoId="YiRu9hJ_-3M"

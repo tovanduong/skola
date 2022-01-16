@@ -1,0 +1,215 @@
+.sec-about {
+    padding: 0;
+}
+.about__head {
+    margin-bottom: 30px;
+}
+.about__title {
+    font-weight: 500;
+    font-size: 35px;
+    color: #2F2D51;
+}
+.about__des {
+    font-weight: normal;
+    font-size: 18px;
+    color: #77838F;
+    margin-bottom: 40px;
+}
+.about__para {
+    font-weight: normal;
+    font-size: 16px;
+    color: #77838F;
+
+}
+.about__video {
+    position: relative;
+}
+
+.about__counter {
+    // display: flex;
+    // justify-content: space-between;
+    padding: 60px 103px 94px 103px;
+    p {
+        margin: 0px;
+    }
+    @media (max-width:1200px) {
+        font-size: 26px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @media (max-width:768px) {
+        margin-bottom: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.about__item--count {
+    margin: 0px;
+    @media (max-width:768px) {
+        margin-bottom: 10px;
+    }
+}
+.counter1 {
+    height: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: capitalize;
+    color: #2F2D51;
+
+}
+.about__name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #77838F;
+}
+.about__why--backgr {
+    background: #F7F9FB;
+}
+.about__why {
+    text-align: center;
+    padding: 95px 0;
+}
+.about__group {
+    &:first-child{
+        margin-left: 48px;
+    }
+    &:not(:last-child) {
+        margin-right: -30px;
+    }
+    @media (max-width:767px) {
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+        &:first-child{
+            margin-left: 0px;
+        }
+    }
+}
+.about__group--img {
+    img {
+        width: auto;
+    }
+    margin-bottom: 30px;
+}
+.about__group--desc {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.about__group--title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #2F2D51;
+}
+
+.about__group--desc {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #77838F;
+}
+.about__staff {
+    text-align: center;
+    padding: 88px 0 188px 0;
+    .swiper-slide-active {
+        background: #F7F9FB;
+        border-radius: 15px;
+        &::before{
+            content: '"';
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 100px;
+            text-transform: capitalize;
+            color: #77838F;
+        }
+    }
+}
+
+.pagination-custom {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about__card {
+   padding-top: 46px;
+   padding: 46px 58px 28px 58px;
+}
+.about__card--inf {
+    position: relative;
+    text-align: center;
+}
+
+.about__card--img {
+    img {
+        width: auto;
+    }
+}
+.about__card--name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2F2D51;
+}
+.about__card--job {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #77838F;
+}
+.about__card--deps {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #77838F;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 110px 0 92px 0;
+    border: 1px solid rgba(231, 231, 236, 1);
+    .about__head {
+        margin-bottom: 56px;
+    }
+}
+.about__newsletter--input {
+    height: 68px;
+    width: 70%;
+    padding: 16px 0 16px 22px;
+    background: #FFFFFF;
+    border: 1px solid #E7E7EC;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1);
+    border-radius: 4px 0px 0px 4px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #77838F;
+    @media (max-width:768px) {
+        width: 100%;
+    }
+}
+.about__newsletter--btn {
+    background: #090761;
+    padding: 20px 54px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    @media (max-width:768px) {
+        width: 100%;
+    }
+}
+.about__newsletter--form {
+    margin-left: 25%;
+    @media (max-width:1400px) {
+        margin-left: 0px;
+        width: 100%;
+    }
+}

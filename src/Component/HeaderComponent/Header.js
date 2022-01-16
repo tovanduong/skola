@@ -6,6 +6,8 @@ import {
     NavLink,
 } from "react-router-dom";
 import { useState } from 'react';
+
+
 function Header() {
     const [menu, setMenu] = useState(false);
     // const [close, setclose] = useState(false);
@@ -24,10 +26,10 @@ function Header() {
                 <ul className='header-list '>
                     <li className='header-item'><NavLink to="/">Home</NavLink></li>
                     <li className='header-item'><NavLink to="/course">Course</NavLink></li>
-                    <li className='header-item'><NavLink to="#">Pages</NavLink></li>
+                    <li className='header-item'><NavLink to="/about">About Us</NavLink></li>
                     <li className='header-item'><NavLink to="/blog">Blog</NavLink></li>
-                    <li className='header-item'><NavLink to="#">Shop</NavLink></li>
-                    <li className='header-item'><NavLink to="#">Contact</NavLink></li>
+                    <li className='header-item'><NavLink to="/shop">Shop</NavLink></li>
+                    <li className='header-item'><NavLink to="/contact">Contact Us</NavLink></li>
                 </ul>
                 <div className='header__btn'>
                     <div onClick={HandleClick}><img src='/img/Group5.png' /></div>

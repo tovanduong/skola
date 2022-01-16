@@ -1,0 +1,33 @@
+.shop__page--head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.shop__found {
+    margin-bottom: 20px;
+}
+.shop__dropdown {
+
+    .dropdown {
+        // margin-left: 32%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dropdown-toggle {
+    background: #FFFFFF;
+    border: 1px solid #E7E7EC;
+    box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1);
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #77838F;
+}
+
+.btn {
+    color: #77838F  !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E7E7EC !important;
+    box-shadow: 0px 8px 15px rgba(140, 152, 164, 0.1) !important;
+}

@@ -4,6 +4,11 @@ import React from "react";
 import Home from '../../Page/Home';
 import Course from '../../Page/Couser';
 import Blog from '../../Page/Blog';
+import AboutUs from '../../Page/aboutUs';
+import BlogDetail from '../BlogDetail/BlogDetail';
+import Contact from '../../Page/contactUs';
+import Shop from '../../Page/shop';
+import { DataShop } from '../../data/data';
 import {
     Switch,
     Route,
@@ -19,6 +24,10 @@ function Content() {
                     <Route exact path="/course" component={Course} />
                     <Route exact path="/course/:id" component={CourseDetail} />
                     <Route exact path="/blog" component={Blog} />
+                    <Route exact path="/blog/:id" component={BlogDetail} />
+                    <Route exact path="/about" component={AboutUs} />
+                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/shop" component={() => <Shop item={DataShop}/>} />
                     <Redirect to="/" />
                 </Switch>
             </main>

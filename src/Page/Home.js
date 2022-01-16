@@ -3,17 +3,18 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable jsx-a11y/alt-text */
 import Banner from "../Component/BannerComponent/Banner";
+import { v4 as uuidv4 } from 'uuid';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import AOS from "aos";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-import '../Component/BlogComponent/blogDetail.scss'
+import '../Component/BlogComponent/BlogItem.scss'
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import ItemCouser from "../Component/CourseComponent/ItemCouser";
-import BlogDetail from "../Component/BlogComponent/blogDetail";
+import BlogItem from "../Component/BlogComponent/BlogItem";
 import { DataBlog, DataCourse } from "../data/data";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 function Home() {
@@ -23,7 +24,6 @@ function Home() {
       AOS.init({
         duration: 2000,
       });
-      console.log("adsa");
     }, 5000);
   }, []);
   return (
@@ -81,7 +81,7 @@ function Home() {
                 disableOnInteraction: false,
               }}
               pagination={{
-                el: "#pagination-custom",
+                el: ".pagination-custom",
                 clickable: true,
               }}
               navigation={false}
@@ -90,7 +90,7 @@ function Home() {
               {DataCourse.map((number, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={index}>
+                    <div className="col-md-4" key={uuidv4()}>
                       <SwiperSlide>
                         <ItemCouser title={number} />
                       </SwiperSlide>
@@ -233,7 +233,7 @@ function Home() {
               disableOnInteraction: false,
             }}
             pagination={{
-              el: "#pagination-custom",
+              el: ".pagination-custom",
               clickable: true,
             }}
             navigation={false}
@@ -336,7 +336,7 @@ function Home() {
               </div>
             </SwiperSlide>
           </Swiper>
-          <div id="pagination-custom"></div>
+          <div className="pagination-custom"></div>
           <div className="row">
             <div className="pay">
               <div>
@@ -538,7 +538,7 @@ function Home() {
                 disableOnInteraction: false,
               }}
               pagination={{
-                el: "#pagination-custom",
+                el: ".pagination-custom",
                 clickable: true,
               }}
               navigation={false}
@@ -627,7 +627,7 @@ function Home() {
                 disableOnInteraction: false,
               }}
               pagination={{
-                el: "#pagination-custom",
+                el: ".pagination-custom",
                 clickable: true,
               }}
               navigation={false}
@@ -636,9 +636,9 @@ function Home() {
               {DataBlog.map((number, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={index}>
+                    <div className="col-md-4" key={uuidv4()}>
                       <SwiperSlide>
-                        <BlogDetail title={number} />
+                        <BlogItem title={number} />
                       </SwiperSlide>
                     </div>
                   );

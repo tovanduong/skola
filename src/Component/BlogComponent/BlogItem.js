@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "./blogDetail.scss";
+import "./BlogItem.scss";
 import "aos/dist/aos.css";
 import { NavLink } from "react-router-dom";
 
-function BlogDetail(props) {
+function BlogItem(props) {
   return (
     <>
       <section className="section sec__blog">
@@ -37,4 +37,4 @@ function BlogDetail(props) {
   );
 }
 
-export default BlogDetail;
+export default BlogItem;

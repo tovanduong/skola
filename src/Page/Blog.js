@@ -1,4 +1,4 @@
-import BlogDetail from "../Component/BlogComponent/blogDetail";
+import BlogItem from "../Component/BlogComponent/BlogItem";
 import './Blog.scss'
 import { DataBlog } from '../data/data'
 import { useEffect} from 'react'
@@ -26,7 +26,7 @@ function Blog() {
                     <div className="row" >
                         {DataBlog.map((number, index) =>
                             <div className="col-md-4" key={index}>
-                                <BlogDetail title={number} />
+                                <BlogItem title={number} />
                             </div>
                         )}
                     </div>
