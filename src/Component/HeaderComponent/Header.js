@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 import { useState } from 'react';
 
-
 function Header() {
+    document.title = "Skola"
     const [menu, setMenu] = useState(false);
     // const [close, setclose] = useState(false);
     const HandleClick = () => {

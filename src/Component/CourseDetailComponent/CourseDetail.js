@@ -123,7 +123,7 @@ function CourseDetail() {
                                         <ShowMoreText
                                             /* Default options */
                                             lines={3}
-                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group 1.png' /></div>}
+                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group1.png' /></div>}
                                             less={<div className='show-group'><p className='show-btn'>Less More</p> <img src='/img/group2.png' /></div>} className="content-css"
                                             anchorClass="my-anchor-css-class"
                                             expanded={false}
@@ -266,7 +266,7 @@ function CourseDetail() {
                                         <ShowMoreText
                                             /* Default options */
                                             lines={3}
-                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group 1.png' /></div>}
+                                            more={<div className='show-group'><p className='show-btn'>Read More</p> <img src='/img/group1.png' /></div>}
                                             less={<div className='show-group'><p className='show-btn'>Less More</p> <img src='/img/group2.png' /></div>} className="content-css"
                                             anchorClass="my-anchor-css-class"
                                             expanded={false}
