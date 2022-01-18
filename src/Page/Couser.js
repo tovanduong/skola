@@ -2,7 +2,6 @@ import ItemCouser from "../Component/CourseComponent/ItemCouser";
 import './Course.scss'
 import { DataCourse } from '../data/data'
 import { useEffect} from 'react'
-import { v4 as uuidv4 } from 'uuid';
 
 function Course() {
     useEffect(() => {
@@ -26,7 +25,7 @@ function Course() {
                 <div className="container">
                     <div className="row" >
                         {DataCourse.map((number, index) =>
-                            <div className="col-md-4" key={uuidv4()}>
+                            <div className="col-lg-6 col-xl-4" key={index}>
                                 <ItemCouser title={number} />
                             </div>
                         )}

@@ -22,6 +22,12 @@ function Footer() {
               </p>
               <p className="skola__address">123 456 7890</p>
               <p className="skola__address">support@skola.com</p>
+              <div className="skola__iconGroup">
+                <div className="skola__icon--fb"><img src="/img/f.png"/></div>
+                <div className="skola__icon--fb"><img src="/img/t.png"/></div>
+                <div className="skola__icon--fb"><img src="/img/insta.png"/></div>
+                <div className="skola__icon--fb"><img src="/img/i.png"/></div>
+              </div>
             </div>
             <div className="col-md-2 footer__content">
               <Accordion allowZeroExpanded>

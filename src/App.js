@@ -1,15 +1,13 @@
 import './App.scss';
 
 // import './swiper.css'
-import SitePage from './Component/site';
+import SitePage from './site';
 
 
 function App() {
   return (
-    <div className="App">
-    
+    <div className="App">   
         <SitePage/>
-
     </div>
   );
 }

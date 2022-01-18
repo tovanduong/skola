@@ -11,11 +11,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ModalVideo from 'react-modal-video';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 SwiperCore.use([Pagination, Navigation]);
 function AboutUs() {
     const [isOpen, setOpen] = useState(false);
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <section className="section sec-page">
@@ -46,7 +48,7 @@ function AboutUs() {
                                         videoId="YiRu9hJ_-3M"
                                         onClose={() => setOpen(false)}
                                     />
-                                    <button className="btn"
+                                    <button className="btn-modal"
                                         onClick={() => setOpen(true)}>
                                         <img src='/img/player_btn1.png' />
                                     </button>

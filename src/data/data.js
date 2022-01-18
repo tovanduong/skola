@@ -96,7 +96,7 @@ export const DataComment = [
 export const DataBlog = [
   {
     id: 1,
-    title: "The Best Places to Start Your Travel",
+    title: "The Best Places to Start Your Travel and Go Train More Over",
     des: "Master Figma app to get a job in UI Design, User Interface, User Experience design, Web Design & UX design.",
     img: "/img/images.jpg",
     date: "06 April, 2020",
@@ -112,7 +112,7 @@ export const DataBlog = [
   },
   {
     id: 3,
-    title: "World Heath Day in LA 2020",
+    title: "World Heath Day in LA 2020 and Event Lunar Moon in the World",
     img: "/img/images3.jpg",
     date: "06 April, 2020",
     name: "Jack Wilson",
@@ -120,7 +120,7 @@ export const DataBlog = [
   },
   {
     id: 4,
-    title: "The Best Places to Start Your Travel",
+    title: "The Best Places to Start Your Travel and Go Train More Over",
     img: "/img/images.jpg",
     date: "06 April, 2020",
     name: "Jack Wilson",
@@ -136,7 +136,7 @@ export const DataBlog = [
   },
   {
     id: 6,
-    title: "World Heath Day in LA 2020",
+    title: "World Heath Day in LA 2020 and Event Lunar Moon in the World",
     img: "/img/images3.jpg",
     date: "06 April, 2020",
     name: "Jack Wilson",
@@ -144,7 +144,7 @@ export const DataBlog = [
   },
   {
     id: 7,
-    title: "The Best Places to Start Your Travel",
+    title: "The Best Places to Start Your Travel and Go Train More Over",
     img: "/img/images.jpg",
     date: "06 April, 2020",
     name: "Jack Wilson",
@@ -160,7 +160,7 @@ export const DataBlog = [
   },
   {
     id: 9,
-    title: "World Heath Day in LA 2020",
+    title: "World Heath Day in LA 2020 and Event Lunar Moon in the World",
     img: "/img/images3.jpg",
     date: "06 April, 2020",
     name: "Jack Wilson",

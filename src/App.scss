@@ -25,7 +25,7 @@ img {
     border: 1px solid #090761;
     border-radius: 4px;
     color: #090761;
-    transition: all 3s ease;
+    transition: all 0.5s ease;
     padding: 14px 31px;
     font-weight: 500;
     font-size: 14px;
@@ -104,4 +104,21 @@ a {
     order: 1;
     flex-grow: 0;
     margin: 6px 0px;
+}
+
+.item__add {
+    position: absolute;
+    bottom: 0px;
+    left: 15%;
+    right: 15%;
+    padding: 16px 30px;
+    background: #196ECD;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    transform: translateY(55px);
+
 }

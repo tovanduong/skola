@@ -26,6 +26,9 @@ function Home() {
       });
     }, 5000);
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <Banner />
@@ -46,34 +49,14 @@ function Home() {
           <div className="row">
             <Swiper
               breakpoints={{
-                640: {
-                  width: 640,
-                  slidesPerView: 1,
-                },
                 768: {
-                  width: 720,
-                  slidesPerView: 2,
+                  "spaceBetween": 10,
+                  "slidesPerView": 2,
                 },
-                1024: {
-                  width: 960,
-                  slidesPerView: 2,
-                },
-                1280: {
-                  width: 1140,
-                  slidesPerView: 2,
-                },
-                1366: {
-                  width: 1135,
-                  slidesPerView: 2,
-                },
-                1440: {
-                  width: 880,
-                  slidesPerView: 2,
-                },
-                1920: {
-                  width: 1300,
-                  slidesPerView: 3,
-                },
+                1200: {
+                  "spaceBetween": 10,
+                  "slidesPerView": 3,
+                }
               }}
               spaceBetween={10}
               autoplay={{
@@ -198,34 +181,14 @@ function Home() {
 
           <Swiper
             breakpoints={{
-              640: {
-                width: 640,
-                slidesPerView: 1,
-              },
               768: {
-                width: 690,
-                slidesPerView: 2,
+                "spaceBetween": 10,
+                "slidesPerView": 2,
               },
-              1024: {
-                width: 930,
-                slidesPerView: 2,
-              },
-              1280: {
-                width: 1110,
-                slidesPerView: 2,
-              },
-              1366: {
-                width: 1110,
-                slidesPerView: 2,
-              },
-              1440: {
-                width: 860,
-                slidesPerView: 2,
-              },
-              1920: {
-                width: 1300,
-                slidesPerView: 3,
-              },
+              1200: {
+                "spaceBetween": 10,
+                "slidesPerView": 3,
+              }
             }}
             spaceBetween={10}
             autoplay={{
@@ -503,34 +466,14 @@ function Home() {
           <div className="row">
             <Swiper
               breakpoints={{
-                640: {
-                  width: 640,
-                  slidesPerView: 1,
-                },
                 768: {
-                  width: 720,
-                  slidesPerView: 2,
+                  "spaceBetween": 10,
+                  "slidesPerView": 2,
                 },
-                1024: {
-                  width: 960,
-                  slidesPerView: 2,
-                },
-                1280: {
-                  width: 1130,
-                  slidesPerView: 2,
-                },
-                1366: {
-                  width: 1130,
-                  slidesPerView: 2,
-                },
-                1440: {
-                  width: 870,
-                  slidesPerView: 2,
-                },
-                1920: {
-                  width: 1310,
-                  slidesPerView: 3,
-                },
+                1200: {
+                  "spaceBetween": 10,
+                  "slidesPerView": 3,
+                }
               }}
               spaceBetween={10}
               autoplay={{
@@ -592,34 +535,14 @@ function Home() {
           <div className="row">
             <Swiper
               breakpoints={{
-                640: {
-                  width: 640,
-                  slidesPerView: 1,
-                },
                 768: {
-                  width: 720,
-                  slidesPerView: 2,
+                  "spaceBetween": 10,
+                  "slidesPerView": 2,
                 },
-                1024: {
-                  width: 960,
-                  slidesPerView: 2,
-                },
-                1280: {
-                  width: 1132,
-                  slidesPerView: 2,
-                },
-                1366: {
-                  width: 1130,
-                  slidesPerView: 2,
-                },
-                1440: {
-                  width: 1310,
-                  slidesPerView: 3,
-                },
-                1920: {
-                  width: 1310,
-                  slidesPerView: 3,
-                },
+                1200: {
+                  "spaceBetween": 10,
+                  "slidesPerView": 3,
+                }
               }}
               spaceBetween={10}
               autoplay={{

@@ -23,6 +23,20 @@
     text-transform: capitalize;
     color: #77838F;
 }
+.skola__iconGroup {
+    display: flex;
+    align-items: center;
+}
+.skola__icon--fb {
+    margin-right: 20px;
+    transition: all 0.5s ease;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+        transform: scale(1.75);
+    }
+}
 .footer__content{
    
     .accordion__button {
@@ -34,6 +48,9 @@
         background-color: #F7F9FB;
         padding: 0px;
         margin: 24px 0;
+        @media (max-width:992px) {
+            font-size: 14px;
+        }
         @media (min-width:768px) {
             cursor: default;
         }

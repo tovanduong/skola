@@ -1,6 +1,6 @@
-import Header from './HeaderComponent/Header';
-import Content from './ContentComponent/Content';
-import Footer from './FooterComponent/Footer';
+import Header from './Component/HeaderComponent/Header';
+import Content from './Component/ContentComponent/Content';
+import Footer from './Component/FooterComponent/Footer';
 import {
     BrowserRouter as Router
 } from "react-router-dom";

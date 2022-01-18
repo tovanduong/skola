@@ -348,7 +348,7 @@ function CourseDetail() {
                                         videoId="YiRu9hJ_-3M"
                                         onClose={() => setOpen(false)}
                                     />
-                                    <button className="btn"
+                                    <button className="btn-modal"
                                         onClick={() => setOpen(true)}>
                                         <img src='/img/player_btn1.png' />
                                     </button>

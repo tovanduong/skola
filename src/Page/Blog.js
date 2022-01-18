@@ -25,7 +25,7 @@ function Blog() {
                 <div className="container">
                     <div className="row" >
                         {DataBlog.map((number, index) =>
-                            <div className="col-md-4" key={index}>
+                            <div className="col-lg-6 col-xl-4" key={index}>
                                 <BlogItem title={number} />
                             </div>
                         )}

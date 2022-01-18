@@ -100,12 +100,17 @@
     box-shadow: none !important;
     padding: 0 20px 10px;
     margin: 0 30px;
-    @media (min-width:768) {
+    @media (min-width:500px) and (max-width:767px) {
         &:not(:last-child) {
             margin-right: 70px;
         }
     }
-    @media (min-width:1024px) {
+    @media (max-width:500px) {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    @media (min-width:992px) and (max-width:1199px) {
         margin: 0 20px;
     }
     &:focus {
@@ -322,7 +327,7 @@
 
 .feedback__group {
     text-align: center;
-    
+    margin-top: 20px;
     background: #FFFFFF;
     /* Stroke Color */
 
@@ -353,11 +358,13 @@
     position: relative;
     width: 100%;
 }
-.btn{
+.btn-modal{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid grey;
 }
 .CourseDetail__inf {
     text-align: center;

@@ -2,7 +2,7 @@
 import './shop.scss'
 import ShopItem from '../Component/ShopItem/ShopItem';
 import { Dropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Shop(props) {
@@ -11,6 +11,9 @@ function Shop(props) {
     const toggle = () => {
         setMenu(!menu);
     }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <section className="section sec-page">
@@ -47,7 +50,7 @@ function Shop(props) {
 
                     <div className="row">
                         {props.item.map((number, index) =>
-                            <div className="col-md-3" key={index}>
+                            <div className="col-xl-3 col-lg-4 col-md-6" key={index}>
                                 <ShopItem title={number} />
                             </div>
                         )}
