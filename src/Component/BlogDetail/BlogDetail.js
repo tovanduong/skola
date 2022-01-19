@@ -77,7 +77,7 @@ function BlogDetail(props) {
                                 <h3 className="blog_title">Course Description</h3>
                                 <div className="row">
                                     {Datalearn.map((number, index) => (
-                                        <div className="col-md-6" key={index}>
+                                        <div className="col-md-6" key={number.id}>
                                             <Learn title={number} />
                                         </div>
                                     ))}
@@ -122,7 +122,7 @@ function BlogDetail(props) {
                                 <h3 className="blog_title">Comment</h3>
                                 <div className="row">
                                     {DataComment.map((cmt, index) => (
-                                        <div className="col-md-12" key={index}>
+                                        <div className="col-md-12" key={cmt.id}>
                                             <Comment comment={cmt} />
                                         </div>
                                     ))}

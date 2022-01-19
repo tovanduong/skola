@@ -25,7 +25,7 @@ function Course() {
                 <div className="container">
                     <div className="row" >
                         {DataCourse.map((number, index) =>
-                            <div className="col-lg-6 col-xl-4" key={index}>
+                            <div className="col-lg-6 col-xl-4" key={number.id}>
                                 <ItemCouser title={number} />
                             </div>
                         )}

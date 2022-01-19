@@ -112,7 +112,7 @@ function ShopDetail(props) {
                                             <div className='col-xl-8 col-lg-12'>
                                                 {
                                                     DataRating.map((item, index) =>
-                                                        <Rating key={index} percent={item.percent} star={item.img} total={item.total} />
+                                                        <Rating key={item.id} percent={item.percent} star={item.img} total={item.total} />
                                                     )
                                                 }
                                             </div>
@@ -120,7 +120,7 @@ function ShopDetail(props) {
                                         <div className='shopDetail__comment'>
                                             {
                                                 DataComment.map((cmt, index) =>
-                                                    <Comment key={index} comment={cmt} />
+                                                    <Comment key={cmt.id} comment={cmt} />
                                                 )
                                             }
                                         </div>

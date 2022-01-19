@@ -5,6 +5,7 @@ import './contactUs.scss'
 import GoogleMapReact from 'google-map-react';
 
 function Contact() {
+
     const AnyReactComponent = ({ text }) => <div className='contact__myLocation'>{text}</div>;
     return (
         <>

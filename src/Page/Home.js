@@ -3,7 +3,6 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable jsx-a11y/alt-text */
 import Banner from "../Component/BannerComponent/Banner";
-import { v4 as uuidv4 } from 'uuid';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,6 +17,7 @@ import BlogItem from "../Component/BlogComponent/BlogItem";
 import { DataBlog, DataCourse } from "../data/data";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 function Home() {
+  // const [gotop, setGotop] = useState(false)
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(function () {
@@ -26,11 +26,23 @@ function Home() {
       });
     }, 5000);
   }, []);
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY >= 500) {
+  //       setGotop(true)
+  //       console.log(window.scrollY)
+  //     } else {
+  //       setGotop(false)
+  //     }
+  //   }
+
+  //   window.addEventListener = ('scroll', handleScroll)
+  // }, [])
+  
   return (
     <>
+      {/* {gotop && (<button style={{position: 'fixed', bottom: 20, right: 20, backgroundColor: 'red'}}>top</button>)} */}
       <Banner />
       <section className="section sec-couser">
         <div className="container">
@@ -70,17 +82,17 @@ function Home() {
               navigation={false}
               className="mySwiper"
             >
-              {DataCourse.map((number, index) => {
+              {/* {DataCourse.map((number, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={uuidv4()}>
+                    <div className="col-md-4" key={number.id}>
                       <SwiperSlide>
-                        <ItemCouser title={number} />
+                        <ItemCouser title={number.title} />
                       </SwiperSlide>
                     </div>
                   );
                 }
-              })}
+              })} */}
             </Swiper>
           </div>
         </div>
@@ -559,9 +571,9 @@ function Home() {
               {DataBlog.map((number, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={uuidv4()}>
+                    <div className="col-md-4" key={number.id}>
                       <SwiperSlide>
-                        <BlogItem title={number} />
+                        <BlogItem title={number.title} />
                       </SwiperSlide>
                     </div>
                   );

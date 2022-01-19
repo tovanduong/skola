@@ -90,7 +90,7 @@ function CourseDetail() {
                                         <div className='list-text'>
                                             <div className='row'>
                                                 {Datalearn.map((number, index) =>
-                                                    <div className="col-md-6" key={uuidv4()}>
+                                                    <div className="col-md-6" key={number.id}>
                                                         <Learn title={number} />
                                                     </div>
                                                 )}
@@ -323,14 +323,14 @@ function CourseDetail() {
                                             <div className='col-md-8' >
                                                 {
                                                     DataRating.map((item, index) =>
-                                                        <Rating key={uuidv4()} percent={item.percent} star={item.img} total={item.total} />
+                                                        <Rating key={item.id} percent={item.percent} star={item.img} total={item.total} />
                                                     )
                                                 }
                                             </div>
                                             <div className='col-md-12' >
                                                 {
                                                     DataComment.map((cmt, index) =>
-                                                        <Comment key={uuidv4()} comment={cmt} />
+                                                        <Comment key={cmt.id} comment={cmt} />
                                                     )
                                                 }
                                             </div>

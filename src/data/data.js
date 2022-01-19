@@ -45,21 +45,25 @@ export const DataCourse = [
 
 export const DataRating = [
   {
+    id: 1,
     percent: 85,
     img: "/img/star5.png",
     total: 1785,
   },
   {
+    id: 2,
     percent: 55,
     img: "/img/star4.png",
     total: 985,
   },
   {
+    id: 3,
     percent: 35,
     img: "/img/star3.png",
     total: 305,
   },
   {
+    id: 4,
     percent: 15,
     img: "/img/star2.png",
     total: 102,
@@ -68,6 +72,7 @@ export const DataRating = [
 
 export const DataComment = [
   {
+    id: 1,
     name: "Oscar Cafeo",
     icon: "/img/star5.png",
     course: "Beautiful caurse",
@@ -76,6 +81,7 @@ export const DataComment = [
       "This course was well organized and covered a lot more details than any other Figma courses. I really enjoy it. One suggestion is that it can be much better if we could complete the prototype together. Since we created 24 frames, I really want to test it on Figma mirror to see all the connections. Could you please let me take a look at the complete prototype?",
   },
   {
+    id: 2,
     name: "Alex Morgan",
     icon: "/img/star4.png",
     course: "Beautiful caurse",
@@ -84,6 +90,7 @@ export const DataComment = [
       "This course was well organized and covered a lot more details than any other Figma courses. I really enjoy it. One suggestion is that it can be much better if we could complete the prototype together. Since we created 24 frames, I really want to test it on Figma mirror to see all the connections. Could you please let me take a look at the complete prototype?",
   },
   {
+    id: 3,
     name: "Khanh NQ",
     icon: "/img/star3.png",
     course: "Beautiful caurse",
