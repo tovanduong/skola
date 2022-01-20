@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useParams } from 'react-router-dom'
-import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react'
 import ShowMoreText from "react-show-more-text";
 import { DataRating, DataComment, Datalearn } from '../../data/data';

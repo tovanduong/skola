@@ -3,10 +3,15 @@
 
 import './contactUs.scss'
 import GoogleMapReact from 'google-map-react';
+import React, { useEffect } from 'react'
 
 function Contact() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const AnyReactComponent = ({ text }) => <div className='contact__myLocation'>{text}</div>;
+    
+
     return (
         <>
             <section className="section sec-page">

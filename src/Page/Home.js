@@ -25,24 +25,11 @@ function Home() {
         duration: 2000,
       });
     }, 5000);
+
   }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY >= 500) {
-  //       setGotop(true)
-  //       console.log(window.scrollY)
-  //     } else {
-  //       setGotop(false)
-  //     }
-  //   }
-
-  //   window.addEventListener = ('scroll', handleScroll)
-  // }, [])
   
   return (
     <>
-      {/* {gotop && (<button style={{position: 'fixed', bottom: 20, right: 20, backgroundColor: 'red'}}>top</button>)} */}
       <Banner />
       <section className="section sec-couser">
         <div className="container">
@@ -82,17 +69,17 @@ function Home() {
               navigation={false}
               className="mySwiper"
             >
-              {/* {DataCourse.map((number, index) => {
+              {DataCourse.map((numb, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={number.id}>
+                    <div className="col-md-4" key={numb.id}>
                       <SwiperSlide>
-                        <ItemCouser title={number.title} />
+                        <ItemCouser title={numb} />
                       </SwiperSlide>
                     </div>
                   );
                 }
-              })} */}
+              })}
             </Swiper>
           </div>
         </div>
@@ -568,12 +555,12 @@ function Home() {
               navigation={false}
               className="mySwiper"
             >
-              {DataBlog.map((number, index) => {
+              {DataBlog.map((num, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={number.id}>
+                    <div className="col-md-4" key={num.id}>
                       <SwiperSlide>
-                        <BlogItem title={number.title} />
+                        <BlogItem title={num} />
                       </SwiperSlide>
                     </div>
                   );

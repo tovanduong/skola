@@ -3,7 +3,6 @@
 import './learn.scss'
 
 function Learn(props) {
-    console.log(props)
     return (
         <>
             <div className='list-text__item'>

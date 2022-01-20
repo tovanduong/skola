@@ -10,13 +10,16 @@ import Contact from '../../Page/contactUs';
 import Shop from '../../Page/shop';
 import ShopDetail from '../ShopDetail/ShopDetail';
 import { DataShop } from '../../data/data';
-
 import {
     Switch,
     Route,
-    Redirect
+    Redirect,
 } from "react-router-dom";
 import CourseDetail from '../CourseDetailComponent/CourseDetail';
+
+
+
+
 function Content() {
     return (
         <>
@@ -38,4 +41,4 @@ function Content() {
     )
 }
 
-export default Content;
+export default (Content);

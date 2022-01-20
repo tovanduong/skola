@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 
 function Shop(props) {
     const [menu, setMenu] = useState(false);
-    // const [close, setclose] = useState(false);
     const toggle = () => {
         setMenu(!menu);
     }
@@ -28,7 +27,6 @@ function Shop(props) {
             </section>
             <section className="section sec-shop">
                 <div className="container">
-                    {/* <div className='row'> */}
                     <div className='shop__page--head row'>
                         <h4 className='shop__found col-md-6'>
                             We found 834 products available for you
@@ -56,7 +54,6 @@ function Shop(props) {
                         )}
                     </div>
                 </div>
-                {/* </div> */}
 
             </section>
 

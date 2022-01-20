@@ -13,16 +13,19 @@ import "swiper/css/navigation";
 import ModalVideo from 'react-modal-video';
 import React, { useState, useEffect } from 'react'
 SwiperCore.use([Pagination, Navigation]);
+
 function AboutUs() {
     const [isOpen, setOpen] = useState(false);
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
     return (
         <>
             <section className="section sec-page">
                 <div className="container">
                     <div className="row">
+
                         <div className="col-md-12 text-center">
                             <h3 className="sec-page__title">About Us </h3>
                             <p className="sec-page__text">Home / About Us</p>
@@ -55,53 +58,53 @@ function AboutUs() {
                                 </div>
                                 <div className="about__counter row">
                                     <div className="col-md-3 about__item--count">
-                                        <p id="about__c1--n1">
+                                        <div id="about__c1--n1">
                                             <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                                 {({ isVisible }) => (
-                                                    <div className='counter1'>
+                                                    <p className='counter1'>
                                                         {isVisible ? <CountUp end={749} start={0} duration={1} /> : null}
-                                                    </div>
+                                                    </p>
                                                 )}
                                             </VisibilitySensor>
-                                        </p>
+                                        </div>
                                         <p className="about__name">Creative Events</p>
                                     </div>
                                     <div className="col-md-3 about__item--count">
-                                        <p id="about__c2--n1">
+                                        <div id="about__c2--n1">
                                             <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                                 {({ isVisible }) => (
-                                                    <div className='counter1'>
+                                                    <p className='counter1'>
                                                         {isVisible ? <CountUp end={853} start={0} duration={1} /> : null}
-                                                    </div>
+                                                    </p>
                                                 )}
                                             </VisibilitySensor>
-                                        </p>
+                                        </div>
                                         <p className="about__name">Skilled Tutors</p>
                                     </div>
                                     <div className="col-md-3 about__item--count">
-                                        <p id="about__c2--n1">
+                                        <div id="about__c2--n1">
                                             <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                                 {({ isVisible }) => (
-                                                    <div className='counter1'>
+                                                    <p className='counter1'>
                                                         {isVisible ? <CountUp end={28} start={0} duration={1} /> : null}
                                                         <span>K+</span>
-                                                    </div>
+                                                    </p>
                                                 )}
                                             </VisibilitySensor>
-                                        </p>
+                                        </div>
                                         <p className="about__name">Online Courses</p>
                                     </div>
                                     <div className="col-md-3 about__item--count">
-                                        <p id="about__c4--n1">
+                                        <div id="about__c4--n1">
                                             <VisibilitySensor partialVisibility offset={{ bottom: 50 }}>
                                                 {({ isVisible }) => (
-                                                    <div className='counter1'>
+                                                    <p className='counter1'>
                                                         {isVisible ? <CountUp end={53} start={0} duration={1} /> : null}
                                                         <span>K+</span>
-                                                    </div>
+                                                    </p>
                                                 )}
                                             </VisibilitySensor>
-                                        </p>
+                                        </div>
                                         <p className="about__name">People Worldwide</p>
                                     </div>
                                 </div>
