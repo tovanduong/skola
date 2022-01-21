@@ -14,10 +14,10 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import ItemCouser from "../Component/CourseComponent/ItemCouser";
 import BlogItem from "../Component/BlogComponent/BlogItem";
+
 import { DataBlog, DataCourse } from "../data/data";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 function Home() {
-  // const [gotop, setGotop] = useState(false)
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(function () {
@@ -27,7 +27,7 @@ function Home() {
     }, 5000);
 
   }, []);
-  
+
   return (
     <>
       <Banner />
