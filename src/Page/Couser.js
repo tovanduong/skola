@@ -1,12 +1,12 @@
 import ItemCouser from "../Component/CourseComponent/ItemCouser";
 import './Course.scss'
-import { DataCourse } from '../data/data'
 import { useEffect} from 'react'
 
-function Course() {
+function Course(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    console.log(props.course)
     return (
         <>
             <section className="section sec-page">
@@ -24,7 +24,7 @@ function Course() {
             <section className="section sec-course">
                 <div className="container">
                     <div className="row" >
-                        {DataCourse.map((number, index) =>
+                        {props.course.map((number, index) =>
                             <div className="col-lg-6 col-xl-4" key={number.id}>
                                 <ItemCouser title={number} />
                             </div>

@@ -15,9 +15,8 @@ import { useEffect } from "react";
 import ItemCouser from "../Component/CourseComponent/ItemCouser";
 import BlogItem from "../Component/BlogComponent/BlogItem";
 
-import { DataBlog, DataCourse } from "../data/data";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
-function Home() {
+function Home(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(function () {
@@ -69,10 +68,10 @@ function Home() {
               navigation={false}
               className="mySwiper"
             >
-              {DataCourse.map((numb, index) => {
+              {props.course.map((numb, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={numb.id}>
+                    <div className="col-md-4" key={index}>
                       <SwiperSlide>
                         <ItemCouser title={numb} />
                       </SwiperSlide>
@@ -555,10 +554,10 @@ function Home() {
               navigation={false}
               className="mySwiper"
             >
-              {DataBlog.map((num, index) => {
+              {props.blog.map((num, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={num.id}>
+                    <div className="col-md-4" key={index}>
                       <SwiperSlide>
                         <BlogItem title={num} />
                       </SwiperSlide>

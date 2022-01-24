@@ -47,9 +47,9 @@ function Shop(props) {
                     </div>
 
                     <div className="row">
-                        {props.item.map((number, index) =>
+                        {props.shop.map((number, index) =>
                             <div className="col-xl-3 col-lg-4 col-md-6" key={number.id}>
-                                <ShopItem title={number} />
+                                <ShopItem title={number}/>
                             </div>
                         )}
                     </div>

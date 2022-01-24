@@ -1,18 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable eqeqeq */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useParams } from 'react-router-dom'
 import React, { useState } from 'react'
 import ShowMoreText from "react-show-more-text";
-import { DataRating, DataComment, Datalearn } from '../../data/data';
 import { useEffect } from 'react'
 import Rating from '../ratingComponent/RatingComponent'
-import { DataCourse } from '../../data/data'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Comment from '../CommentComponent/CommentComponent';
 import ModalVideo from 'react-modal-video';
 import '../../../node_modules/react-modal-video/scss/modal-video.scss';
 import Learn from '../LearnComponent/learn';
+import { useParams } from 'react-router-dom'
 import {
     Accordion,
     AccordionItem,
@@ -21,17 +20,18 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
-
 import 'react-tabs/style/react-tabs.css';
 import './CourseDetail.scss'
-function CourseDetail() {
+function CourseDetail( props ) {
+
     let { id } = useParams();
-    // document.body.scrollTop = 0;
+    console.log(props.course)
+    const course = props.course.filter(data => data.id == id)
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    const getItem = DataCourse.filter(data => data.id == id)
-    console.log(getItem)
+
     const [isOpen, setOpen] = useState(false)
     return (
         <>
@@ -40,8 +40,8 @@ function CourseDetail() {
                     <div className="row" >
                         <div className="col-md-8" >
                             <div className="sec-CourseDetail__group ">
-                                <h3 className='sec-CourseDetail__title' >{getItem[0].title}</h3>
-                                <p className="sec-CourseDetail__text">{getItem[0].des}</p>
+                                <h3 className='sec-CourseDetail__title' >{course[0].title}</h3>
+                                <p className="sec-CourseDetail__text">{course[0].des}</p>
                             </div>
                             <div className="sec-CourseDetail__Created" >
                                 <div className='over-round'><img src='/img/Mask Group1.jpg' /> </div>
@@ -88,7 +88,7 @@ function CourseDetail() {
                                         <h3 className='sec-CourseDetail__sub-title'>What you'll learn</h3>
                                         <div className='list-text'>
                                             <div className='row'>
-                                                {Datalearn.map((number, index) =>
+                                                {props.learn.map((number, index) =>
                                                     <div className="col-md-6" key={number.id}>
                                                         <Learn title={number} />
                                                     </div>
@@ -321,14 +321,14 @@ function CourseDetail() {
                                             </div>
                                             <div className='col-md-8' >
                                                 {
-                                                    DataRating.map((item, index) =>
+                                                    props.rate.map((item, index) =>
                                                         <Rating key={item.id} percent={item.percent} star={item.img} total={item.total} />
                                                     )
                                                 }
                                             </div>
                                             <div className='col-md-12' >
                                                 {
-                                                    DataComment.map((cmt, index) =>
+                                                    props.comment.map((cmt, index) =>
                                                         <Comment key={cmt.id} comment={cmt} />
                                                     )
                                                 }
@@ -341,7 +341,7 @@ function CourseDetail() {
                         <div className="col-md-4" >
                             <div className="sec-CourseDetail__inf">
                                 <div className='sec-CourseDetail__group'>
-                                    <img src={getItem[0].img} alt={getItem[0].title}/>
+                                    <img src={course[0].img} alt={course[0].title}/>
                                     <ModalVideo channel='youtube'
                                         autoplay isOpen={isOpen}
                                         videoId="YiRu9hJ_-3M"

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable eqeqeq */
-import { DataBlog, Datalearn, DataComment } from "../../data/data";
 import { useParams } from "react-router-dom";
 import Learn from "../LearnComponent/learn";
 import Comment from "../CommentComponent/CommentComponent";
@@ -11,7 +10,7 @@ import { useEffect } from "react";
 
 function BlogDetail(props) {
     let { id } = useParams();
-    const getItem = DataBlog.filter((data) => data.id == id);
+    const getItem = props.blog.filter((data) => data.id == id);
     console.log(getItem[0]);
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -76,7 +75,7 @@ function BlogDetail(props) {
                             <div className="blog__learn">
                                 <h3 className="blog_title">Course Description</h3>
                                 <div className="row">
-                                    {Datalearn.map((number, index) => (
+                                    {props.learn.map((number, index) => (
                                         <div className="col-md-6" key={number.id}>
                                             <Learn title={number} />
                                         </div>
@@ -121,7 +120,7 @@ function BlogDetail(props) {
                             <div className="blog__comment">
                                 <h3 className="blog_title">Comment</h3>
                                 <div className="row">
-                                    {DataComment.map((cmt, index) => (
+                                    {props.comment.map((cmt, index) => (
                                         <div className="col-md-12" key={cmt.id}>
                                             <Comment comment={cmt} />
                                         </div>

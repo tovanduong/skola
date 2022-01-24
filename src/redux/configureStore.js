@@ -1,12 +1,21 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from "redux-thunk";
 import logger from "redux-logger";
-import { Staffs } from './reducer'
-
+import { Blogs } from './Blog'
+import { Course } from './Course'
+import { Shops } from './Shop'
+import { Rates } from './Rate'
+import { Comments } from './Comment'
+import { Learns } from './Learn';
 export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
-            staffs: Staffs,
+            Blog: Blogs,
+            Course: Course,
+            Shop: Shops,
+            Rate: Rates,
+            Comment: Comments,
+            Learn: Learns,
         }),
         applyMiddleware(thunk, logger)
     );

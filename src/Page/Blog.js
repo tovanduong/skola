@@ -1,12 +1,12 @@
 import BlogItem from "../Component/BlogComponent/BlogItem";
 import './Blog.scss'
-import { DataBlog } from '../data/data'
 import { useEffect} from 'react'
 
-function Blog() {
+function Blog(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+    console.log(props)
     return (
         <>
             <section className="section sec-page">
@@ -24,7 +24,7 @@ function Blog() {
             <section className="section sec-Blogs">
                 <div className="container">
                     <div className="row" >
-                        {DataBlog.map((number, index) =>
+                        {props.blog.map((number, index) =>
                             <div className="col-lg-6 col-xl-4" key={number.id}>
                                 <BlogItem title={number} />
                             </div>

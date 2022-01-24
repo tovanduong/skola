@@ -6,7 +6,6 @@ import { NavLink, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { DataComment, DataRating } from '../../data/data'
 import Submit from '../submitComponent/submit'
 import Comment from '../CommentComponent/CommentComponent';
 import Rating from '../ratingComponent/RatingComponent';
@@ -14,7 +13,7 @@ import Rating from '../ratingComponent/RatingComponent';
 function ShopDetail(props) {
     console.log(props)
     let { id } = useParams();
-    const getItem = props.item.filter((data) => data.id == id);
+    const getItem = props.shop.filter((data) => data.id == id);
     console.log(getItem)
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -46,7 +45,7 @@ function ShopDetail(props) {
                                 <div className='shopDetail__group--img'><img src='/img/Frame5.png' /></div>
                                 <p className='shopDetail__para'>432 in stock</p>
                             </div>
-                            <div className='shopDetail__coverBtn'><NavLink className='shopDetail__btn' to='/home'>Add to Cart</NavLink><img src='/img/save.png'/></div>
+                            <div className='shopDetail__coverBtn'><NavLink className='shopDetail__btn' to='/home'>Add to Cart</NavLink><img src='/img/save.png' /></div>
                             <div className='shopDetail__sku'>
                                 <p className='shopDetail__para shopDetail__sku--title'>Sku:</p>
                                 <p className='shopDetail__para shopDetail__sku--content'>{getItem[0].Sku}</p>
@@ -111,7 +110,7 @@ function ShopDetail(props) {
                                             </div>
                                             <div className='col-xl-8 col-lg-12'>
                                                 {
-                                                    DataRating.map((item, index) =>
+                                                    props.rate.map((item, index) =>
                                                         <Rating key={item.id} percent={item.percent} star={item.img} total={item.total} />
                                                     )
                                                 }
@@ -119,7 +118,7 @@ function ShopDetail(props) {
                                         </div>
                                         <div className='shopDetail__comment'>
                                             {
-                                                DataComment.map((cmt, index) =>
+                                                props.comment.map((cmt, index) =>
                                                     <Comment key={cmt.id} comment={cmt} />
                                                 )
                                             }
