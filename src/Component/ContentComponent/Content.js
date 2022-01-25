@@ -9,11 +9,13 @@ import AboutUs from "../../Page/aboutUs";
 import BlogDetail from "../BlogDetail/BlogDetail";
 import Contact from "../../Page/contactUs";
 import Shop from "../../Page/shop";
+import { connect } from "react-redux";
+
 import ShopDetail from "../ShopDetail/ShopDetail";
 import { Switch, Route, Redirect } from "react-router-dom";
 import CourseDetail from "../CourseDetailComponent/CourseDetail";
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 import {
   fetchBlog,
   fetchCourse,
@@ -22,33 +24,62 @@ import {
   fetchComment,
   fetchLearn,
 } from "../../redux/ActionCreator";
+const mapStateToProps = (state) => {
+  return {
+    Course: state.Course,
+    Blog: state.Blog,
+    Shop: state.Shop,
+    Rate: state.Rate,
+    Comment: state.Comment,
+    Learn: state.Learn,
+  };
+};
 
-function Content() {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
+const mapDispatchToProps = (dispatch) => ({
+  fetchBlog: () => {
     dispatch(fetchBlog());
+  },
+  fetchCourse: () => {
     dispatch(fetchCourse());
+  },
+  fetchShop: () => {
     dispatch(fetchShop());
+  },
+  fetchRate: () => {
     dispatch(fetchRate());
+  },
+  fetchComment: () => {
     dispatch(fetchComment());
+  },
+  fetchLearn: () => {
     dispatch(fetchLearn());
+  },
+});
+
+function Content(props) {
+//   const dispatch = useDispatch();
+  useEffect(() => {
+    props.fetchBlog();
+    props.fetchCourse();
+    props.fetchShop();
+    props.fetchRate();
+    props.fetchComment();
+    props.fetchLearn();
   }, []);
 
-  const state = useSelector((state) => state);
+  console.log(props);
 
   const CourseWithId = () => {
-
+    console.log(props.Course.course);
     return (
-        <CourseDetail
-        course={state.Course.course}      
-        rate={state.Rate.rate}
-        comment={state.Comment.comment}
-        learn={state.Learn.learn}
+      <CourseDetail
+        course={props.Course}
+        rate={props.Rate.rate}
+        comment={props.Comment.comment}
+        learn={props.Learn.learn}
       />
     );
   };
-  console.log(state);
   return (
     <>
       <main className="main-content">
@@ -57,35 +88,28 @@ function Content() {
             exact
             path="/home"
             component={() => (
-              <Home
-                course={state.Course.course}
-                blog={state.Blog.blogs}
-              />
+              <Home course={props.Course.course} blog={props.Blog.blogs} />
             )}
           />
           <Route
             exact
             path="/course"
-            component={() => <Course course={state.Course.course} />}
+            component={() => <Course course={props.Course.course} />}
           />
-          <Route
-            exact
-            path="/course/:id"
-            component={CourseWithId}
-          />
+          <Route exact path="/course/:id" component={CourseWithId} />
           <Route
             exact
             path="/blog"
-            component={() => <Blog blog={state.Blog.blogs} />}
+            component={() => <Blog blog={props.Blog.blogs} />}
           />
           <Route
             exact
             path="/blog/:id"
             component={() => (
               <BlogDetail
-                blog={state.Blog.blogs}
-                comment={state.Comment.comment}
-                learn={state.Learn.learn}
+                blog={props.Blog.blogs}
+                comment={props.Comment.comment}
+                learn={props.Learn.learn}
               />
             )}
           />
@@ -96,9 +120,9 @@ function Content() {
             path="/shop"
             component={() => (
               <Shop
-                shop={state.Shop.shop}
-                comment={state.Comment.comment}
-                learn={state.Learn.learn}
+                shop={props.Shop.shop}
+                comment={props.Comment.comment}
+                learn={props.Learn.learn}
               />
             )}
           />
@@ -107,9 +131,9 @@ function Content() {
             path="/shop/:id"
             component={() => (
               <ShopDetail
-                shop={state.Shop.shop}
-                comment={state.Comment.comment}
-                rate={state.Rate.rate}
+                shop={props.Shop.shop}
+                comment={props.Comment.comment}
+                rate={props.Rate.rate}
               />
             )}
           />
@@ -120,4 +144,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

@@ -23,15 +23,14 @@ import 'react-accessible-accordion/dist/fancy-example.css';
 import 'react-tabs/style/react-tabs.css';
 import './CourseDetail.scss'
 function CourseDetail( props ) {
-
     let { id } = useParams();
-    console.log(props.course)
-    const course = props.course.filter(data => data.id == id)
+    console.log(props)
+    var course = props.course.course.filter(data => data.id == id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
+    console.log(course)
     const [isOpen, setOpen] = useState(false)
     return (
         <>

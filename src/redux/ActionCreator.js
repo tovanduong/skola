@@ -21,7 +21,7 @@ export const fetchBlog = () => (dispatch) => {
     .catch(error => console.log('ERROR ' + error));
 }
 
-export const fetchCourse = () =>{
+export const fetchCourse = () => (dispatch) => {
   return fetch("http://localhost:3000/DataCourse")
     .then(response => {
       if (response.ok) {
@@ -37,7 +37,7 @@ export const fetchCourse = () =>{
         throw errmess;
       })
     .then(response => response.json())
-    .then(courses => AddCourse(courses))
+    .then(courses => dispatch(AddCourse(courses)))
     .catch(error => console.log('ERROR ' + error));
 }
 
