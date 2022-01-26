@@ -12,7 +12,7 @@ import Shop from "../../Page/shop";
 import { connect } from "react-redux";
 
 import ShopDetail from "../ShopDetail/ShopDetail";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useParams } from "react-router-dom";
 import CourseDetail from "../CourseDetailComponent/CourseDetail";
 import { useEffect } from "react";
 // import { useSelector, useDispatch } from "react-redux";
@@ -70,10 +70,12 @@ function Content(props) {
   console.log(props);
 
   const CourseWithId = () => {
-    console.log(props.Course.course);
+    let { id } = useParams();
+    var course = props.Course.course.filter(data => data.id == id)[0]
+    console.log(course);
     return (
       <CourseDetail
-        course={props.Course}
+        course={course}
         rate={props.Rate.rate}
         comment={props.Comment.comment}
         learn={props.Learn.learn}
