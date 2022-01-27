@@ -40,7 +40,26 @@ export const fetchCourse = () => (dispatch) => {
     .then(courses => dispatch(AddCourse(courses)))
     .catch(error => console.log('ERROR ' + error));
 }
-
+export const fetchCourseDetail = (id) => (dispatch) => {
+  console.log(id)
+  return fetch("http://localhost:3000/DataCourse/" + id)
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        var error = new Error('Error ' + response.status + ': ' + response.statusText);
+        error.response = response;
+        throw error;
+      }
+    },
+      error => {
+        var errmess = new Error(error.message);
+        throw errmess;
+      })
+    .then(response => response.json())
+    .then(course => dispatch(AddCourseDetail(course)))
+    .catch(error => console.log('ERROR ' + error));
+}
 export const fetchShop = () => (dispatch) => {
   return fetch("http://localhost:3000/DataShop")
     .then(response => {
@@ -132,6 +151,13 @@ export const AddCourse = (course) => (
   {
     type: ActionType.ADD_COURSE,
     payload: course,
+  }
+)
+
+export const AddCourseDetail = (courseId) => (
+  {
+    type: ActionType.ADD_COURSE_DETAIL,
+    payload: courseId,
   }
 )
 

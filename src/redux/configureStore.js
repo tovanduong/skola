@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 import { Blogs } from './Blog'
 import { Course } from './Course'
+import { CourseDetail } from './CourseDetail';
 import { Shops } from './Shop'
 import { Rates } from './Rate'
 import { Comments } from './Comment'
@@ -16,6 +17,7 @@ export const ConfigureStore = () => {
             Rate: Rates,
             Comment: Comments,
             Learn: Learns,
+            CourseDetail: CourseDetail
         }),
         applyMiddleware(thunk, logger)
     );

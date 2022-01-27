@@ -18,19 +18,25 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
+import { useParams } from 'react-router-dom';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import 'react-tabs/style/react-tabs.css';
 import './CourseDetail.scss'
-function CourseDetail( props ) {
-    // let { id } = useParams();
-    // console.log(props)
-    // var course = props.course.course.filter(data => data.id == id)
+import { fetchCourseDetail } from '../../redux/ActionCreator';
+import { useDispatch, useSelector } from 'react-redux';
 
+
+function CourseDetail(props) {
+    let { id } = useParams();
+    const dispatch =  useDispatch()
+    console.log(id)
     useEffect(() => {
+        dispatch(fetchCourseDetail(id))
         window.scrollTo(0, 0)
     }, [])
-    
-    console.log(props)
+
+    const courses = useSelector((state) => state.CourseDetail.courseId);
+    console.log(courses)
 
     const [isOpen, setOpen] = useState(false)
     return (
@@ -40,8 +46,8 @@ function CourseDetail( props ) {
                     <div className="row" >
                         <div className="col-md-8" >
                             <div className="sec-CourseDetail__group ">
-                                <h3 className='sec-CourseDetail__title' >{props.course.title}</h3>
-                                <p className="sec-CourseDetail__text">{props.course.des}</p>
+                                <h3 className='sec-CourseDetail__title' >{courses.title}</h3>
+                                <p className="sec-CourseDetail__text">{courses.des}</p>
                             </div>
                             <div className="sec-CourseDetail__Created" >
                                 <div className='over-round'><img src='/img/Mask Group1.jpg' /> </div>
@@ -341,7 +347,7 @@ function CourseDetail( props ) {
                         <div className="col-md-4" >
                             <div className="sec-CourseDetail__inf">
                                 <div className='sec-CourseDetail__group'>
-                                    <img src={props.course.img} alt={props.course.title}/>
+                                    <img src={courses.img} alt={courses.title} />
                                     <ModalVideo channel='youtube'
                                         autoplay isOpen={isOpen}
                                         videoId="YiRu9hJ_-3M"

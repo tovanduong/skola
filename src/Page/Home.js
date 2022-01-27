@@ -71,11 +71,9 @@ function Home(props) {
               {props.course.map((numb, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={index}>
-                      <SwiperSlide>
+                      <SwiperSlide className="col-md-4" key={index}>
                         <ItemCouser title={numb} />
                       </SwiperSlide>
-                    </div>
                   );
                 }
               })}
@@ -557,11 +555,9 @@ function Home(props) {
               {props.blog.map((num, index) => {
                 if (index < 4) {
                   return (
-                    <div className="col-md-4" key={index}>
-                      <SwiperSlide>
+                      <SwiperSlide className="col-md-4" key={num.id}>
                         <BlogItem title={num} />
                       </SwiperSlide>
-                    </div>
                   );
                 }
               })}
